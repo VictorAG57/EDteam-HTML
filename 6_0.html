@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- en "Border" indica el borde que tendra cada celda, cada td
+    con "padding indicamos la sepración que querraos que halla por dentro"
+    "border-collapse:collapse" eliminamos separacion, no se crean espacios
+    -->
+    <style>
+        table{
+            border-collapse:collapse;
+
+        }
+        td,th{
+            border: 1px solid;
+            padding: .5em;
+        }
+        th{
+            background: black;
+            color: blanchedalmond;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- TABLAS BÁSICAS-->
+    <!-- <table> Creamos una tabla-->
+    <!-- <tr> es cada fila
+    <td> para cada celda    
+    -->
+    <table >
+       <td>Html</td>
+       <td>CSS</td>
+       <td>JavaS</td>
+       <td>PHP</td>
+    </table>
+    <table>
+        <td>Html</td>
+        <td>CSS</td>
+        <td>JavaS</td>
+        <td>PHP</td>
+    </table>
+    <table>
+        <td>Html</td>
+        <td>CSS</td>
+        <td>JavaS</td>
+        <td>PHP</td>
+    </table>
+    <table>
+        <td>Html</td>
+        <td>CSS</td>
+        <td>JavaS</td>
+        <td>PHP</td>
+    </table>
+    <!-- ESTRUCTURA COMPLETA -->
+
+    <!--<th> indicamos que es una cabezera,
+        celda de cabezera
+    <thead> ahi pondrmos nuestra cabezera 
+    <tbody> ira nuestro resto de contenido de nuestra tabla
+    todo con el fin de encapsular las sonas de nuestra tabla  
+    <tfoot> es la conclusion de nuesttra tabla, esto es 
+        adicional no obligatorio
+        <Caption es el titulo de la tabla>
+
+    -->
+
+     <table >
+         <caption>Tabla ejemplo</caption>
+         <colgroup>
+            <col span="2">
+            <col style="background: cadetblue;">
+        </colgroup>
+         <thead>
+            <th>Html</th>
+            <th>CSS</th>
+            <th>JavaS</th>
+            <th>PHP</th>
+         </thead>
+         <tbody>
+    <tr>
+        <td rowspan="3">Html</td>
+        <td>CSS</td>
+        <td>JavaS</td>
+        <td>PHP</td>
+    </tr>
+    <tr>
+        
+        <td>CSS</td>
+        <td>JavaS</td>
+        <td>PHP</td>
+    </tr>
+    <tr>
+        
+        <td>CSS</td>
+        <td>JavaS</td>
+        <td>PHP</td>
+    </tr>
+    </tbody>
+    <!-- tfoot SIEMPRE ira abajo-->
+    <tfoot>
+        <tr>
+            <td colspan="4">2 cursos </td>
+        </tr>
+
+    </tfoot>
+</table>
+<!-- Atributos que agrupar celdas-->
+<!-- Colsoan sirve para unir celdas en forma de fila
+    roespan sirve para unir celdad en manera de columna
+-->
+<!-- <Colgrop> -->
+    <!-- Podremos selecionar una columa y modificarla
+    debemos usar la etiqueta dentro de ella <col>
+-->
+
+    
+</body>
+</html>

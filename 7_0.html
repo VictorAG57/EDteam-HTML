@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- margin-button funciona para la sepracion entre formulario-->
+    <style>
+        div{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Estructura básica de un formulario en html
+    Todo formulario tiene que tener el campo nombre
+    -->
+    <!-- <form> Creamos un formulario
+        <imput> Creamos un espacio de un formulario
+            <button> Creamos un boton
+        "placefolder" un atributo que funciona como una 
+        marca de agua que indica que llevara el formulario
+        "action" atributo que indica a donde mandara el formulario
+        <textarea> nos permite colocar un mnsaje
+            "cols y rows" nos da el espacio de textarea columnas ty 
+            filas que quieres que tenga
+        <value> es importante siempre enviar este valor al servidor
+            puesto que inidica que contiene, el valor de ese campo
+    -->
+    <!-- <leabel> -->
+        <!-- Nos perite indicar para que es el formulario que indicaste
+        y el atributo "for" es para indicar a cual de todos los campos
+         le escribes eso-->
+         <!-- <felsed> agrupa campos del formulario
+        <legend> le da un nombre a ese grupo-->
+
+    <h1>Inicia seción</h1>
+    <form action="form.html" autocomplete="on">
+       
+       
+        <fieldset>
+            <legend>Nombre de la agrupacion</legend>
+            <div>
+                <input id="fecha" type="date" name="fecha">
+            </div>
+        </fieldset>
+        <!-- De esta manera hacemos lo mismo que en campos 
+            anteriores pero evitas el "id" y el "for"-->
+        <div>
+            <label>email
+                <input name="ejemplo">
+            </label>
+        </div>
+        <!-- -------------------------------------- -->
+        
+        <div>
+            <label for="campo1"> Nombre de usuario: </label>
+            <input id="campo1" placeholder="Escribe tu nombre de usuario" name="name">
+        </div>
+        <div>
+            <label for="campo2"> Contraseña: </label>
+        <input id="campo2" type="text" placeholder="Contraseña" name="pasword"><br>
+        </div>
+        <div>
+            <label for="campo3"> Escribe un mensaje:  </label><br>
+            <textarea id="campo3" name="message" cols="30" 
+            rows="10" placeholder="Dejanos un mensaje"></textarea>
+        </div>
+        <!-- Funciona igual que el boton de enviar-->
+        <input type="submit" value="valor o nombre" name="enviar">
+            <button name="enviar 2">Enviar</button>
+            <button name="borrar">Eliminar</button>
+        <fieldset>
+            <legend>Tipos de input</legend>
+            <label ></label> Tiempo:  </label>
+            <input type="time"><br>
+            <label > texto:  </label>
+            <input type="text"><br>
+            <label > Escribe un mail:  </label>
+            <input type="email"><br>
+            <label > Escribe un número:  </label>
+            <input type="number"><br>
+            <label > Escribe un  número telefonico:  </label>
+            <input type="tel"><br>
+            <label > color:  </label>
+            <input type="color"><br>
+            <label > Escribe una contraseña:  </label>
+            <input type="password"><br>
+            <label > Rango:  </label>
+            <input type="range"><br>
+            <label > Rango 2:  </label>
+            <input type="range" min="0" max="10" step="1" value="0"><br>
+            </imput>
+
+        </fieldset>
+        <fieldset>
+            <!-- Suempre poner nombre y valor-->
+            <legend>Opciones de selección</legend>
+            <label > Check Box:  </label><br>
+            <input type="checkbox">
+            Cine
+            <label>
+                <input type="checkbox" checked>
+                Música
+            </label>
+            <label >
+                <input type="checkbox">
+                Caminar
+
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Radio button</legend>
+            <div>
+                <label>
+                    <input name="gender" type="radio">
+                    Hombre<br>
+                </label>
+                <label>
+                    <input name="gender" type="radio">
+                    Mujer
+                </label>
+            </div>
+        </fieldset>
+        <!-- <select> nos permite seleccionar 
+            ir a un <select> por cada opción-->
+         <!-- <optgrop> Nos permite dividir las opciones 
+             esta etiqueta se usa dentro de SELECT-->
+        <fieldset>
+            <legend>Select</legend>
+            <select id="seleccion">
+                <option value="Mex">México</option>
+                <option value="Col">Colombia</option>
+                <option value="Per">Perú</option>
+                <option value="Ven">Venezuela</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Select 2</legend>
+            <select id="seleccion2">
+                <optgroup label="Equipo 1">
+                    <option value="Mex">México</option>
+                    <option value="Col">Colombia</option>
+                </optgroup>
+                <optgroup label="Equipo 2">
+                    <option value="Per">Perú</option>
+                    <option value="Ven">Venezuela</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <!-- <details> sirve como buscador de opciones
+        value le damos el valor y el id de data list debe coincidir 
+        con el nombre de lista    
+        -->
+        <fieldset>
+            <legend>Seleccion con busqueda</legend>
+            
+            <input type="list" list="country-list" required>
+                <datalist id="country-list">
+                <option value="México"></option>
+                <option value="Colombia"></option>
+                <option value="España"></option>
+                <option value="Francia"></option>
+                <option value="Alemania"></option>
+                <option value="USA" selected></option>
+                </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Solo lectura</legend>
+            <label id="lectura" for="lectura" >Nombre: </label>
+            <input type="text" name="lectura" value="Victor Manuel" readonly>
+            
+            </label>
+        </fieldset>
+        <!-- Atributos en los formularios-->
+        <!-- placeholder
+        type = tipo de dato
+        required = no requiere valor, 
+        e indica que es obligatorio este campo
+        readonly = un campo sea solo lectura
+        autocomplete = "on/of" va en la etiqueta <form>
+            autocompleta
+        checked = sirve para checkbox y radio button
+        selected = para select
+        en ambas indicamos un valor ya predeterminado con value
+        -->
+    </form>
+</body>
+</html>

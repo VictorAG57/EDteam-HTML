@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- atributo de srcset de img
+    mediante este podemos implementar varias imagenes, pero lo ideal
+    es usar la misma imagen de diferente tamaño, y que al dar zoom en 
+    cualquier dispositivo tengas una imagen mas chica con mejor nitides,
+    implementaras las imagines de la misma forma, solamente agregaras
+    x2, x3, x4, x... al final de cada imagen, pondras varias para mejor 
+    resolucion según el zoom
+    -->
+    <!-- <picture> nos permite brindar un elemento multimedia como imagenes
+     en diferentes condiciones-->
+
+     <picture>
+         <!-- Cada ekemeto source es una imagen-->
+         <!-- Colocamos condiciones mediante el atributo "media"
+            la iamgen cambiara segun cuantos pixeles halla disponebles
+            primero va el mas amplio de pixeles y significa medida minima
+        -->
+         <source srcset="imagenes/red-bull-f1-2020-1867859.jpg" media="(min-width: 800px)">
+         <source srcset="imagenes/red-bull-f1-2020-1867859.jpg" media="(min-width: 400px)">
+            <img src="imagenes/red-bull-f1-2020-1867859.jpg">
+     </picture>
+
+     <!-- <figure> no tiene e fin par imagenes, esta echa para cortar contenido
+         rompe el flujo del contenido principal, para insertar contenido relacionado
+         con el contenido, como tablas, videos graficas, e incluso imagenes.
+         <figcaption> sirve para poner una leyenda o comentario al contenido
+    -->
+
+    <figure>
+        <figcaption>
+            <p>
+                Soy un comentario de leyenda
+            </p>
+        </figcaption>
+    </figure>
+    <!-- AUDIO Y VIDEO -->
+    <!-- <video> y src"colocamos la dirección del video"
+        con el atributo "control" es para poderlo reproducir
+    con atributo "poster" pondremos una miniatura al video, solo
+    colocaremos la dirección de la imagen
+    "Autoplay" reproduce el video automatico
+    <audio> y src colocamos la dirección del video
+        con atributo "Control" ya podemos reproducir el audio
+    -->
+
+    <!-- INSERTAR CONTENIDO EXTERNO-->
+    <!-- <ifreame src""> nos permite insertar contenido externo, como 
+        videos de youtube dentro de tu página-->
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fHI8X4OXluQ" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+        picture-in-picture" allowfullscreen></iframe>
+        <!-- Se puede incluir cualquier contenido desde youtube hasta redes sociales-->
+
+
+    
+</body>
+</html>
